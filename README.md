@@ -1,0 +1,2 @@
+# elasticsearch
+JSON-style databasing
