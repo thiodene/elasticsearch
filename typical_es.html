@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function() {
+        $.ajax({
+          url: "http://localhost:9200/visitors/doc/",
+          type:'POST',
+          data: JSON.stringify({ browser: navigator.userAgent,
+                                 date: new Date() }),
+          contentType: 'application/json'
+        });
+      });
+    </script>
+  </body>
+</html>
