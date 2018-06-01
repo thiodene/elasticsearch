@@ -1,0 +1,12 @@
+PUT http://localhost:9200/sims/_doc/sdlc HTTP/1.1
+User-Agent: Fiddler
+Host: localhost:9200
+content-type: application/json; charset=UTF-8
+Content-Length: 119
+
+{
+  "type": "sensor", 
+  "name": "Sulfur Dioxide LC",
+  "equipement": "1",
+  "createdat": "2018-06-01T09:00:00Z"
+}
