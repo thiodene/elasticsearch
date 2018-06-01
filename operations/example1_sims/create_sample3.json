@@ -1,0 +1,16 @@
+PUT http://localhost:9200/sims/_doc/3 HTTP/1.1
+User-Agent: Fiddler
+Host: localhost:9200
+content-type: application/json; charset=UTF-8
+Content-Length: 208
+
+{
+  "type": "sample", 
+  "sensor": "hslc",
+  "equipement": "1",
+  "value": "25.12",
+  "lat": "47.23",
+  "lon": "-88.03",
+  "sampledat": "2018-10-24T09:00:00Z",
+  "createdat": "2018-10-24T09:00:00Z"
+}
