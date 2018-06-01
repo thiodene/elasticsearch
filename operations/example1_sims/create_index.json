@@ -1,0 +1,23 @@
+PUT http://localhost:9200/sims HTTP/1.1
+User-Agent: Fiddler
+Host: localhost:9200
+content-type: application/json; charset=UTF-8
+Content-Length: 442
+
+{
+  "mappings": {
+    "_doc": {
+      "properties": {
+        "type": { "type": "keyword" }, 
+        "sensor": { "type": "keyword" },
+        "name": { "type": "text" },
+        "equipement": { "type": "keyword" },
+        "value": { "type": "float" },
+        "lat": { "type": "float" },
+        "lon": { "type": "float" },
+        "sampledat": { "type": "date" },
+        "createdat": { "type": "date" }
+      }
+    }
+  }
+}
