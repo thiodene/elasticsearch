@@ -1,0 +1,2193 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Scentroid",
+		"_postman_id": "056132a0-7feb-7dd8-2d26-56671c317ff1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Equipment",
+			"description": "",
+			"item": [
+				{
+					"name": "Equipment - Put",
+					"request": {
+						"url": "http://{{ip}}/equipment",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "1233",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "status",
+									"value": "26",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "serial_number",
+									"value": "124567",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "secret",
+									"value": "45214",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "extra",
+									"value": "toronto",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "company",
+									"value": "987",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "category",
+									"value": "12",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "calibrated_on",
+									"value": "3456789",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "created_by",
+									"value": "176",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "created_on",
+									"value": "4576543",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Equipment - Get",
+					"request": {
+						"url": "http://{{ip}}/equipment",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "pourya@gmail.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "321",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "firstname",
+									"value": "pourya",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "lastname",
+									"value": "jalalipour",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Equipment - Locations",
+					"request": {
+						"url": "http://{{ip}}/equipment/locations",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "pourya@gmail.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "321",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "firstname",
+									"value": "pourya",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "lastname",
+									"value": "jalalipour",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Equipment - Update",
+					"request": {
+						"url": "http://{{ip}}/equipment",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "45",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "name",
+									"value": "1233",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "status",
+									"value": "26",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "serial_number",
+									"value": "124567",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "secret",
+									"value": "45214",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "extra",
+									"value": "toronto",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "company",
+									"value": "987",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "category",
+									"value": "12",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "calibrated_on",
+									"value": "3456789",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "created_by",
+									"value": "176",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "created_on",
+									"value": "4576543",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Equipment - Delete - Search by id",
+					"request": {
+						"url": {
+							"raw": "http://{{ip}}/equipment?filter=id;eq;1",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"path": [
+								"equipment"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "id;eq;1",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "45",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sensor ",
+			"description": "",
+			"item": [
+				{
+					"name": "Sensor - Put",
+					"request": {
+						"url": "http://{{ip}}/sensor",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "1233",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "packet_id",
+									"value": "9876",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "equipment",
+									"value": "98",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "type",
+									"value": "76543",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "unit",
+									"value": "12",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "calibration_factors",
+									"value": "mard",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "alarm_max_value",
+									"value": "21.36",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "alarm_value_total",
+									"value": "765",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "alarm_value_number",
+									"value": "22",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "extra",
+									"value": "namardi",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "created_by",
+									"value": "176",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "created_on",
+									"value": "4576543",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Sensor - Get",
+					"request": {
+						"url": "http://{{ip}}/sensor",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "pourya@gmail.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "321",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "firstname",
+									"value": "pourya",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "lastname",
+									"value": "jalalipour",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Sensor - Update",
+					"request": {
+						"url": "http://{{ip}}/sensor",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "45",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "name",
+									"value": "1233",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "packet_id",
+									"value": "9876",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "equipment",
+									"value": "98",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "type",
+									"value": "76543",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "unit",
+									"value": "12",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "calibration_factors",
+									"value": "mard",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "alarm_max_value",
+									"value": "21.36",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "alarm_value_total",
+									"value": "765",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "alarm_value_number",
+									"value": "22",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "extra",
+									"value": "namardi",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "created_by",
+									"value": "176",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "created_on",
+									"value": "4576543",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Sensor - Delete - Search by id",
+					"request": {
+						"url": {
+							"raw": "http://{{ip}}/sensor?filter=id;eq;1",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"path": [
+								"sensor"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "id;eq;1",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "45",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Wind",
+			"description": "",
+			"item": [
+				{
+					"name": "Wind - Put",
+					"request": {
+						"url": "http://{{ip}}/wind",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "location",
+									"value": "254",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "chill",
+									"value": "-564.5",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "direction",
+									"value": "87.9",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "speed",
+									"value": "98676.87",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "created_on",
+									"value": "4576543",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Wind - Get",
+					"request": {
+						"url": "http://{{ip}}/wind",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "pourya@gmail.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "321",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "firstname",
+									"value": "pourya",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "lastname",
+									"value": "jalalipour",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Wind - Update",
+					"request": {
+						"url": "http://{{ip}}/wind",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "876",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "location",
+									"value": "254",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "chill",
+									"value": "-564.5",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "direction",
+									"value": "87.9",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "speed",
+									"value": "98676.87",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "created_on",
+									"value": "4576543",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Wind - Delete - Search by id",
+					"request": {
+						"url": {
+							"raw": "http://{{ip}}/wind?id=1",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"path": [
+								"wind"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "45",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"description": "",
+			"item": [
+				{
+					"name": "User - Put",
+					"request": {
+						"url": "http://{{ip}}/user",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "pourya@gmail.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "321",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "first_name",
+									"value": "pourya",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "last_name",
+									"value": "jalalipour",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "User - Get",
+					"request": {
+						"url": "http://{{ip}}/user",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "pourya@gmail.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "321",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "firstname",
+									"value": "pourya",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "lastname",
+									"value": "jalalipour",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "User - Me",
+					"request": {
+						"url": "http://{{ip}}/user/me",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "pourya@gmail.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "321",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "firstname",
+									"value": "pourya",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "lastname",
+									"value": "jalalipour",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "User - Login",
+					"request": {
+						"url": "http://{{ip}}/user/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "ides1980",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "User - Logout",
+					"request": {
+						"url": "http://{{ip}}/user/logout",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "pourya2@gmail.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "321",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "User - Get - Search by email",
+					"request": {
+						"url": {
+							"raw": "http://{{ip}}/user?filter=email;eq;admin",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "email;eq;admin",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "pourya@gmail.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "321",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "firstname",
+									"value": "pourya",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "lastname",
+									"value": "jalalipour",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "User - Delete - Search by email",
+					"request": {
+						"url": {
+							"raw": "http://{{ip}}/user?filter=email;eq;pourya@gmail.com",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "email;eq;pourya@gmail.com",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "User - Update",
+					"request": {
+						"url": "http://{{ip}}/user",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "email",
+									"value": "pourya@gmail.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "321",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "first_name",
+									"value": "pourya",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "last_name",
+									"value": "jalalipour",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"description": "",
+			"item": [
+				{
+					"name": "Company - Get",
+					"request": {
+						"url": "http://{{ip}}/company",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "pourya@gmail.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "321",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "firstname",
+									"value": "pourya",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "lastname",
+									"value": "jalalipour",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Company  - Delete - Search by name",
+					"request": {
+						"url": {
+							"raw": "http://{{ip}}/company?filter=name;eq;Pourya",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"path": [
+								"company"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "name;eq;Pourya",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id=1",
+									"value": "",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Company - Put",
+					"request": {
+						"url": "http://{{ip}}/company",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Saeed",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "city",
+									"value": "Gay Village",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "timezone",
+									"value": "+5.5",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "alarm_email",
+									"value": "p.jalalipour@hotmail.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "address",
+									"value": "126 Simcoh Ave",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "telephone",
+									"value": "647-262-0657",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "logo",
+									"value": "C://",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "manager",
+									"value": "Hendie",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "extra",
+									"value": "{}",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "created_by",
+									"value": "yaroo",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "created_on",
+									"value": "1506810235",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Company - Update",
+					"request": {
+						"url": "http://{{ip}}/company",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Saeed",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "city",
+									"value": "Gay Village",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "timezone",
+									"value": "+5.5",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "alarm_email",
+									"value": "p.jalalipour@hotmail.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "address",
+									"value": "126 Simcoh Ave",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "telephone",
+									"value": "647-262-0657",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "logo",
+									"value": "C://",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "manager",
+									"value": "Hendie",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "extra",
+									"value": "{}",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "created_by",
+									"value": "yaroo",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "created_on",
+									"value": "1506810235",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Log",
+			"description": "",
+			"item": [
+				{
+					"name": "Log - Delete - Search by id",
+					"request": {
+						"url": {
+							"raw": "http://{{ip}}/log?id=1",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"path": [
+								"log"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Log - Put",
+					"request": {
+						"url": "http://{{ip}}/log",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "company",
+									"value": "Shahid Mousavi",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "equipment",
+									"value": "Saeed",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "info",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "Raye man koo",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "created_on",
+									"value": "16425",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Log - Update",
+					"request": {
+						"url": "http://{{ip}}/log",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "Shahid Harper",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "equipment",
+									"value": "Saeed",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "info",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "Raye man koo",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "created_on",
+									"value": "16425",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Log - Get",
+					"request": {
+						"url": "http://{{ip}}/log",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "Shahid Mousavi",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "equipment",
+									"value": "Saeed",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "info",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "Raye man koo",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "created_on",
+									"value": "16425",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sample",
+			"description": "",
+			"item": [
+				{
+					"name": "Sample - Put",
+					"request": {
+						"url": "http://{{docker0}}/sample",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "equipment",
+									"value": "26",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "sensor",
+									"value": "64",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "type",
+									"value": "a",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "value",
+									"value": "1.3",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "latitude",
+									"value": "15",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "longitude",
+									"value": "34",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "state",
+									"value": "21",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "sample_date",
+									"value": "64",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "created_on",
+									"value": "12",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Sample - Get",
+					"request": {
+						"url": "http://{{ip}}/sample",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Sample- Get by filter",
+					"request": {
+						"url": {
+							"raw": "http://{{ip}}/sample?filter=equipment;eq;26&n=10&filter=sampled_on;gte;1470693809&filter=sampled_on;lte;1470693809",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"path": [
+								"sample"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "equipment;eq;26",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "n",
+									"value": "10",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "filter",
+									"value": "sampled_on;gte;1470693809",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "filter",
+									"value": "sampled_on;lte;1470693809",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Sample - Update",
+					"request": {
+						"url": "http://{{docker0}}/sample",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "equipment",
+									"value": "555",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "sensor",
+									"value": "2",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "type",
+									"value": "7",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "value",
+									"value": "good",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "latitude",
+									"value": "155555",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "longitude",
+									"value": "34",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "state",
+									"value": "21",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "sample_date",
+									"value": "64",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "created_on",
+									"value": "12",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Sample - Delete - Search by id",
+					"request": {
+						"url": {
+							"raw": "http://{{ip}}/sample?filter=id;eq;1",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"path": [
+								"sample"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "id;eq;1",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Setting",
+			"description": "",
+			"item": [
+				{
+					"name": "Setting - Put",
+					"request": {
+						"url": "http://{{ip}}/setting",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "category",
+									"value": "2",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "name",
+									"value": "7",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "value",
+									"value": "good",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "updated_by",
+									"value": "34",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "created_on",
+									"value": "12",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Setting - Get",
+					"request": {
+						"url": "http://{{ip}}/setting",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Setting - Update",
+					"request": {
+						"url": "http://{{ip}}/sample",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "9",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "category",
+									"value": "fan",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "name",
+									"value": "7",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "value",
+									"value": "good",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "updated_by",
+									"value": "34",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "created_on",
+									"value": "12",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "scoop",
+									"value": "neref",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Setting - Delete - Search by id",
+					"request": {
+						"url": {
+							"raw": "http://{{ip}}/sample?filter=id;eq;1",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"path": [
+								"sample"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "id;eq;1",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "14",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Migrate",
+			"description": "",
+			"item": [
+				{
+					"name": "Users",
+					"request": {
+						"url": "http://{{ip}}/migrate/user",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Company",
+					"request": {
+						"url": "http://{{ip}}/migrate/company",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Equipment",
+					"request": {
+						"url": "http://{{ip}}/migrate/equipment",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Sensor",
+					"request": {
+						"url": "http://{{ip}}/migrate/sensor",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Setting",
+					"request": {
+						"url": "http://{{ip}}/migrate/setting",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Sample",
+					"request": {
+						"url": "http://{{docker0}}/migrate/sample",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
