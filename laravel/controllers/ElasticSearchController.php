@@ -34,51 +34,149 @@ class ElasticSearchController extends Controller
     }
 
     
-    // Post to the ES
-    public function elastic_release($release)
+    // INDEX or UPDATE a News Release
+    public function elastic_release_create_or_update($release)
     {
 
         $params = array();
-        $params['body']  = array(
-                'cache' => time()
-        );
+        $params = [
+            'index' => env('ES_INDEX'),
+            'body'  => [
+                'query' => [
+                    'match' => [
+                        'id' => $release->id
+                    ]
+                ]
+            ]
+        ];
         
-        $params['index'] = env('ES_INDEX');
+        $result = $this->client->search($params);
+
+        // Check if document doesn't exists CREATE (POST) 
+        if ($result["hits"]["total"]["value"] == 0)
+        {
+            // ENGLISH RELEASE
+            // ***************************************************************************
+
+            // Get english release
+            $english_release = $release;
+            $english_release["language"] = "en";
+            $english_release = new ElasticApi($english_release);
+            // Set english content to proper data format
+            $params['body'] = json_encode($english_release);
+            $result = $this->client->index($params);
+            
+            // Get english release
+            $french_release = $release;
+            $french_release["language"] = "fr";
+            $french_release = new ElasticApi($french_release);
+            // Set english content to proper data format
+            $params['body'] = json_encode($french_release);
+            $result = $this->client->index($params);
+
+        }
+        else // If document with same release ID exists UPDATE (PUT)
+        {
+            foreach ($result["hits"]["hits"] as $news_release) 
+            {
+                if ($news_release["_source"]["language"] == "en")
+                {
+                    // Get the Index Document ID
+                    $doc_id = $news_release["_id"];
+                    // ENGLISH RELEASE
+                    // ***************************************************************************
+
+                    // Get english release
+                    $english_release = $release;
+                    $english_release["language"] = "en";
+                    $english_release = new ElasticApi($english_release);
+                    // Set english content to proper data format
+                    $params = array();
+                    $params = [
+                        'index' => env('ES_INDEX'),
+                        'id'    => $doc_id
+                    ];
+                    /// For UPDATE use body -> _doc
+                    $params['body']['doc'] = $english_release;
+
+                    // Update document: PUT _index/_doc
+                    $result = $this->client->update($params);
+                }
+                else if ($release["_source"]["language"] == "fr")
+                {
+                    // Get the Index Document ID
+                    $doc_id = $news_release["_id"];
+                    // FRENCH RELEASE
+                    // ***************************************************************************
+
+                    // Get french release
+                    $french_release = $release;
+                    $french_release["language"] = "fr";
+                    $french_release = new ElasticApi($french_release);
+                    // Set french content to proper data format
+                    $params = array();
+                    $params = [
+                        'index' => env('ES_INDEX'),
+                        'id'    => $doc_id
+                    ];
+                    // For UPDATE use body -> _doc
+                    $params['body']['doc'] = $french_release;
+
+                    // Update document: PUT _index/_doc
+                    $result = $this->client->update($params);
+                }
+
+            }
+
+        }
+
+    }
+
+    // DELETE existing Release
+    public function elastic_release_delete($release_id)
+    {
+        $params = array();
+        $params = [
+            'index' => env('ES_INDEX'),
+            'body'  => [
+                'query' => [
+                    'match' => [
+                        'id' => $release_id
+                    ]
+                ]
+            ]
+        ];
         
-        // ENGLISH RELEASE
-        // ***************************************************************************
+        $result = $this->client->search($params);
 
-        // Get english release
-        $english_release = $release;
-        $english_release["language"] = "en";
-        //$english_release = ["data" => new ElasticApi($english_release)];
-        $english_release = new ElasticApi($english_release);
+        // Check if any document exists for this release_id
+        if ($result["hits"]["total"]["value"] > 0)
+        {
+            //$doc_id = $result["hits"]["hits"][0]["_id"];
+            // Loop over each Release with similar ID ex: "EN", "FR",...
+            foreach ($result["hits"]["hits"] as $release) 
+            {
+                $doc_id = $release["_id"];
 
-        // Set english content to proper data format
-        //$params['body'] = array("data" => new ReleaseApi($show_release_english));
-        $params['body'] = json_encode($english_release);
-
-        // Json Encode
-        //json_encode($english);
-
-        $result = $this->client->index($params);
+                // Now delete this DOC from its Indexed ID value
+                // Re-initialize $params
+                $params = array();
+                $params = [
+                    'index' => env('ES_INDEX'),
+                    'id'    => $doc_id
+                ];
+            
+                // Delete doc at /my_index/_doc_/my_id
+                $result = $this->client->delete($params);
+            
+            }
+        }
         //return $result;
-
-        $french_release = $release;
-        $french_release["language"] = "fr";
-        //$french_release = ["data" => new ElasticApi($french_release)];
-        $french_release = new ElasticApi($french_release);
-
-        $params['body'] = json_encode($french_release);
-
-        // Json Encode
-        //json_encode($english);
-
-        $result = $this->client->index($params);
 
     }
     
-    public function search_index()
+    // Search for doc/data in an existing Index
+    public function elastic_search_index()
     {
         $params = array();
 
@@ -91,7 +189,8 @@ class ElasticSearchController extends Controller
         return $result;
     }
 
-    public function show_release($release_id)
+    // Show ES-indexed release from ID
+    public function elastic_show_release($release_id)
     {
         
         $params = array();
@@ -111,18 +210,20 @@ class ElasticSearchController extends Controller
         return $result;
     }
    
-    public function show_mapping()
+    // Show ES mapping for an Index (.ENV)
+    public function elastic_show_mapping()
     {
         $params = array();
         $params['index'] = env('ES_INDEX');
 
         $result = $this->client->indices()->getMapping($params);
-        //$result = $this->client->indices()->getMapping();
+
         return $result;
 
     }
 
-    public function create_index(Request $request)
+    // Create an ES Index
+    public function elastic_create_index(Request $request)
     {
         $params = array();
         $params['body']  = array(
@@ -130,12 +231,13 @@ class ElasticSearchController extends Controller
         );
         $params['index'] = env('ES_INDEX');
         $params['type']  = env('ES_INDEX_TYPE');
-        //var_dump($params);
+
         $result = $this->client->index($params);
         return $result;
     }
 
-    public function create_index_with_mapping()
+    // Creates an ES Index with Mapping
+    public function elastic_create_index_with_mapping()
     {
         $params = array();
         $params['body']  = array(
@@ -278,69 +380,22 @@ class ElasticSearchController extends Controller
 
 
         $result = $this->client->indices()->create($params);
-        //$result = $this->client->index($params);
         return $result;
     }
 
-    public function elastic_release_delete($release_id)
-    {
-        $params = array();
-        $params = [
-            'index' => env('ES_INDEX'),
-            'body'  => [
-                'query' => [
-                    'match' => [
-                        'id' => $release_id
-                    ]
-                ]
-            ]
-        ];
-        
-        $result = $this->client->search($params);
-
-        // Check if any document exists for this release_id
-        if ($result["hits"]["total"]["value"] > 0)
-        {
-            //$doc_id = $result["hits"]["hits"][0]["_id"];
-            // Loop over each Release with similar ID ex: "EN", "FR",...
-            foreach ($result["hits"]["hits"] as $release) 
-            {
-                $doc_id = $release["_id"];
-
-                // Now delete this DOC from its Indexed ID value
-                // Re-initialize $params
-                $params = array();
-                $params = [
-                    'index' => env('ES_INDEX'),
-                    'id'    => $doc_id
-                ];
-            
-                // Delete doc at /my_index/_doc_/my_id
-                $result = $this->client->delete($params);
-            
-            }
-        }
-        //return $result;
-        // Look for the Release in the ES Index if exists delete it
-        //return $result["hits"]["hits"][0]["_id"];
-        //return $result["hits"]["total"]["value"];
-        return $result;
-
-    }
     /**
      * Delete an existing Index
      * Removes also the mapping and existing data stored
      * 
      * @return \Illuminate\Http\Response
      */
-    public function delete_index()
+    public function elastic_delete_index()
     {
         $params = array();
         
         $params = [ 'index' => env('ES_INDEX'),
                     'client' => [ 'ignore' => [400, 404] ] ];
         
-                    //$response = $client->indices()->delete($params);
         $result = $this->client->indices()->delete($params);
         return $result;
     }
